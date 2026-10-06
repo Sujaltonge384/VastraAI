@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import { RotateCcw } from "lucide-react";
@@ -23,7 +23,7 @@ type Pagination = {
   totalPages: number;
 };
 
-export default function ProductsPage() {
+function ProductsPageContent() {
   const searchParams = useSearchParams();
 
   const urlCategory = searchParams.get("category");
@@ -476,5 +476,24 @@ export default function ProductsPage() {
 )}
       </section>
     </main>
+  );
+}
+
+export default function ProductsPage() {
+  return (
+    <Suspense
+      fallback={
+        <main className={styles.page}>
+          <div className={styles.container}>
+            <div className={styles.noResults}>
+              <h2>Loading products...</h2>
+              <p>VastraAI is preparing your collection.</p>
+            </div>
+          </div>
+        </main>
+      }
+    >
+      <ProductsPageContent />
+    </Suspense>
   );
 }

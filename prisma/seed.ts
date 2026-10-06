@@ -1,4 +1,5 @@
 import "dotenv/config";
+
 import { PrismaClient } from "@prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
 
@@ -143,13 +144,56 @@ const products = [
 
 async function main() {
   for (const product of products) {
-    await prisma.product.upsert({
+    const existingProduct = await prisma.product.findFirst({
       where: {
         name: product.name,
+        brand: product.brand,
       },
-      update: product,
-      create: product,
     });
+
+    if (existingProduct) {
+      await prisma.product.update({
+        where: {
+          id: existingProduct.id,
+        },
+        data: {
+          brand: product.brand,
+          price: product.price,
+          originalPrice: product.originalPrice,
+          image: product.image,
+          category: product.category,
+          color: product.color,
+          description: product.description,
+          sizes: product.sizes,
+          colors: product.colors,
+          rating: product.rating,
+          reviews: product.reviews,
+          stock: product.stock,
+        },
+      });
+
+      console.log(`Updated: ${product.name}`);
+    } else {
+      await prisma.product.create({
+        data: {
+          name: product.name,
+          brand: product.brand,
+          price: product.price,
+          originalPrice: product.originalPrice,
+          image: product.image,
+          category: product.category,
+          color: product.color,
+          description: product.description,
+          sizes: product.sizes,
+          colors: product.colors,
+          rating: product.rating,
+          reviews: product.reviews,
+          stock: product.stock,
+        },
+      });
+
+      console.log(`Created: ${product.name}`);
+    }
   }
 
   console.log("Products seeded successfully.");
@@ -157,7 +201,7 @@ async function main() {
 
 main()
   .catch((error) => {
-    console.error(error);
+    console.error("Seed failed:", error);
     process.exit(1);
   })
   .finally(async () => {

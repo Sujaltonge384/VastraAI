@@ -2,6 +2,7 @@
 
 import {
   FormEvent,
+  Suspense,
   useEffect,
   useState,
 } from "react";
@@ -18,8 +19,7 @@ type Product = {
   image: string;
   rating: number;
 };
-
-export default function SearchPage() {
+function SearchPageContent() {
   const searchParams = useSearchParams();
 
   const initialQuery =
@@ -302,5 +302,24 @@ export default function SearchPage() {
         )}
       </div>
     </main>
+  );
+}
+
+export default function SearchPage() {
+  return (
+    <Suspense
+      fallback={
+        <main className={styles.page}>
+          <div className={styles.container}>
+            <div className={styles.noResults}>
+              <h2>Loading search...</h2>
+              <p>VastraAI is preparing your results.</p>
+            </div>
+          </div>
+        </main>
+      }
+    >
+      <SearchPageContent />
+    </Suspense>
   );
 }
