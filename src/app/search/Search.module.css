@@ -1,0 +1,645 @@
+/* =========================================================
+   VASTRAAI — AI SEARCH
+   Premium Editorial Fashion Theme
+   ========================================================= */
+
+.page {
+  min-height: calc(100vh - 78px);
+
+  padding: 72px 0 110px;
+
+  background:
+    radial-gradient(
+      circle at 7% 7%,
+      rgba(246, 217, 201, 0.45),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 93% 15%,
+      rgba(238, 231, 247, 0.45),
+      transparent 25%
+    ),
+    #faf6f1;
+}
+
+.container {
+  width: min(1200px, calc(100% - 48px));
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin: 0 0 14px;
+
+  color: #e84e68;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+
+  width: 29px;
+
+  height: 1px;
+
+  background: currentColor;
+}
+
+.header h1 {
+  margin: 0 0 11px;
+
+  color: #17151a;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(
+    44px,
+    5.5vw,
+    70px
+  );
+
+  font-weight: 500;
+
+  line-height: 0.94;
+
+  letter-spacing: -0.05em;
+}
+
+.header p:last-child {
+  max-width: 570px;
+
+  margin: 0;
+
+  color: #777179;
+
+  font-size: 12px;
+
+  line-height: 1.75;
+}
+
+/* =========================================================
+   SEARCH BOX
+   ========================================================= */
+
+.searchBox {
+  position: relative;
+
+  min-height: 62px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 9px 0 20px;
+
+  margin-bottom: 31px;
+
+  border: 1px solid #dfd5cf;
+
+  border-radius: 16px;
+
+  background:
+    rgba(255, 255, 255, 0.94);
+
+  box-shadow:
+    0 12px 32px rgba(40, 28, 25, 0.055);
+
+  transition:
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    background 220ms ease;
+}
+
+.searchBox:focus-within {
+  border-color: #e84e68;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 4px rgba(232, 78, 104, 0.08),
+    0 15px 38px rgba(40, 28, 25, 0.075);
+}
+
+/* =========================================================
+   SEARCH INPUT
+   ========================================================= */
+
+.searchBox input {
+  flex: 1;
+
+  min-width: 0;
+
+  height: 100%;
+
+  padding: 0;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #29242a;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 13px;
+}
+
+.searchBox input::placeholder {
+  color: #aaa1a7;
+}
+
+/* =========================================================
+   CLEAR BUTTON
+   ========================================================= */
+
+.searchBox button[type="button"] {
+  width: 35px;
+  height: 35px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #f7f1ed;
+
+  color: #746c72;
+
+  font-size: 20px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.searchBox button[type="button"]:hover {
+  background: #fbe7eb;
+
+  color: #e84e68;
+
+  transform: scale(1.05);
+}
+
+/* =========================================================
+   SEARCH SUBMIT
+   ========================================================= */
+
+.searchBox button[type="submit"] {
+  min-width: 108px;
+
+  height: 44px;
+
+  padding: 0 17px;
+
+  border: 1px solid #e84e68;
+
+  border-radius: 11px;
+
+  background: #e84e68;
+
+  color: #ffffff;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 7px 17px rgba(232, 78, 104, 0.16);
+
+  transition:
+    background 200ms ease,
+    border-color 200ms ease,
+    transform 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.searchBox button[type="submit"]:hover:not(:disabled) {
+  background: #d9425d;
+
+  border-color: #d9425d;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 11px 22px rgba(232, 78, 104, 0.22);
+}
+
+.searchBox button[type="submit"]:disabled {
+  opacity: 0.62;
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+}
+
+/* =========================================================
+   RESULTS HEADER
+   ========================================================= */
+
+.resultsHeader {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 23px;
+
+  padding-bottom: 12px;
+
+  border-bottom: 1px solid #e8dfd9;
+}
+
+.resultsHeader p {
+  margin: 0;
+
+  color: #625a60;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   PRODUCT GRID
+   ========================================================= */
+
+.grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 32px 19px;
+}
+
+/* =========================================================
+   NO RESULTS / ERROR STATE
+   ========================================================= */
+
+.noResults {
+  min-height: 390px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 45px 25px;
+
+  border: 1px solid #e8dfd8;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.94),
+      rgba(255, 248, 245, 0.92)
+    );
+
+  text-align: center;
+
+  box-shadow:
+    0 12px 32px rgba(40, 28, 25, 0.045);
+}
+
+.noResults::before {
+  content: "VASTRAAI";
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 28px;
+
+  padding: 0 11px;
+
+  margin-bottom: 18px;
+
+  border-radius: 999px;
+
+  background: #fbe7eb;
+
+  color: #e84e68;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.14em;
+}
+
+.noResults h2 {
+  margin: 0 0 9px;
+
+  color: #211d21;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(
+    28px,
+    4vw,
+    38px
+  );
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: -0.035em;
+}
+
+.noResults p {
+  max-width: 420px;
+
+  margin: 0 0 21px;
+
+  color: #817980;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+.noResults button {
+  min-height: 45px;
+
+  padding: 0 20px;
+
+  border: 1px solid #e84e68;
+
+  border-radius: 999px;
+
+  background: #e84e68;
+
+  color: #ffffff;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 9px 20px rgba(232, 78, 104, 0.16);
+
+  transition:
+    background 200ms ease,
+    transform 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.noResults button:hover {
+  background: #d9425d;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 13px 26px rgba(232, 78, 104, 0.22);
+}
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.searchBox input:focus-visible,
+.searchBox button:focus-visible,
+.noResults button:focus-visible {
+  outline: 2px solid #e84e68;
+
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   LARGE TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+  .container {
+    width: calc(100% - 40px);
+  }
+
+  .grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    gap: 28px 17px;
+  }
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+  .page {
+    padding-top: 54px;
+  }
+
+  .header h1 {
+    font-size: 50px;
+  }
+
+  .grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 27px 13px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 550px) {
+  .page {
+    padding: 43px 0 75px;
+  }
+
+  .container {
+    width: calc(100% - 24px);
+  }
+
+  .header {
+    margin-bottom: 26px;
+  }
+
+  .header h1 {
+    font-size: 42px;
+  }
+
+  .header p:last-child {
+    font-size: 11px;
+  }
+
+  .searchBox {
+    min-height: 56px;
+
+    gap: 7px;
+
+    padding-left: 14px;
+
+    border-radius: 13px;
+  }
+
+  .searchBox input {
+    font-size: 12px;
+  }
+
+  .searchBox button[type="submit"] {
+    min-width: 90px;
+
+    height: 40px;
+
+    padding: 0 12px;
+
+    font-size: 8px;
+  }
+
+  .searchBox button[type="button"] {
+    width: 32px;
+    height: 32px;
+
+    font-size: 18px;
+  }
+
+  .resultsHeader {
+    align-items: flex-start;
+
+    margin-bottom: 19px;
+  }
+
+  .grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 24px 10px;
+  }
+
+  .noResults {
+    min-height: 350px;
+
+    padding: 35px 20px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 390px) {
+  .container {
+    width: calc(100% - 18px);
+  }
+
+  .header h1 {
+    font-size: 37px;
+  }
+
+  .searchBox button[type="submit"] {
+    min-width: 78px;
+  }
+
+  .grid {
+    gap: 21px 8px;
+  }
+
+  .noResults h2 {
+    font-size: 28px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .searchBox button,
+  .noResults button {
+    transition: none;
+  }
+
+  .searchBox button:hover,
+  .noResults button:hover {
+    transform: none;
+  }
+}

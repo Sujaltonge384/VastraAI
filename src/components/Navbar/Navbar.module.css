@@ -1,0 +1,460 @@
+/* =========================================================
+   VASTRAAI — PREMIUM NAVBAR
+   ========================================================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+  height: 78px;
+
+  background: rgba(250, 246, 241, 0.88);
+
+  border-bottom: 1px solid rgba(232, 223, 216, 0.9);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  transition:
+    background 240ms ease,
+    box-shadow 240ms ease,
+    border-color 240ms ease;
+}
+
+/* =========================================================
+   INNER CONTAINER
+   ========================================================= */
+
+.container {
+  width: min(1380px, calc(100% - 56px));
+  height: 100%;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(170px, 1fr)
+    auto
+    minmax(170px, 1fr);
+
+  align-items: center;
+
+  gap: 32px;
+}
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo {
+  justify-self: start;
+
+  position: relative;
+
+  display: inline-flex;
+  align-items: baseline;
+
+  color: #17151a;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 22px;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+
+  text-decoration: none;
+
+  transition:
+    transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 220ms ease;
+}
+
+.logo span {
+  color: #e84e68;
+}
+
+.logo:hover {
+  transform: translateY(-1px);
+  opacity: 0.92;
+}
+
+/* Small premium underline */
+.logo::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -6px;
+
+  width: 100%;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(232, 78, 104, 0.65) 50%,
+      transparent 100%
+    );
+
+  opacity: 0.55;
+}
+
+/* =========================================================
+   MAIN NAVIGATION
+   ========================================================= */
+
+.navLinks {
+  justify-self: center;
+
+  display: flex;
+  align-items: center;
+
+  gap: 34px;
+}
+
+.navLinks a {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+
+  padding: 8px 0;
+
+  color: #363238;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  letter-spacing: 0.01em;
+
+  text-decoration: none;
+
+  transition:
+    color 220ms ease,
+    transform 220ms ease;
+}
+
+/* Editorial underline */
+.navLinks a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  width: 0;
+  height: 1px;
+
+  background: #e84e68;
+
+  transform: translateX(-50%);
+
+  transition:
+    width 240ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.navLinks a:hover {
+  color: #e84e68;
+  transform: translateY(-1px);
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+/* =========================================================
+   RIGHT-SIDE ACTIONS
+   ========================================================= */
+
+.actions {
+  justify-self: end;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+/* =========================================================
+   ICON BUTTONS
+   ========================================================= */
+
+.iconButton,
+.cartButton,
+.navCountButton {
+  position: relative;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid transparent;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.38);
+
+  color: #242127;
+
+  cursor: pointer;
+
+  text-decoration: none;
+
+  transition:
+    background 220ms ease,
+    color 220ms ease,
+    border-color 220ms ease,
+    transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 220ms ease;
+}
+
+.iconButton:hover,
+.cartButton:hover,
+.navCountButton:hover {
+  color: #e84e68;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  border-color: #eadfd8;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(33, 22, 19, 0.07);
+}
+
+/* =========================================================
+   CART
+   ========================================================= */
+
+.cartButton {
+  color: #242127;
+}
+
+/* =========================================================
+   WISHLIST / CART BADGES
+   ========================================================= */
+
+.cartCount,
+.navCount {
+  position: absolute;
+
+  top: -3px;
+  right: -2px;
+
+  min-width: 17px;
+  height: 17px;
+
+  padding: 0 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e84e68;
+
+  color: #ffffff;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  line-height: 1;
+
+  border: 2px solid #faf6f1;
+
+  box-shadow:
+    0 4px 10px rgba(232, 78, 104, 0.20);
+}
+
+/* =========================================================
+   PROFILE
+   ========================================================= */
+
+.profileButton {
+  position: relative;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #2a2529;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #2b2529,
+      #111014
+    );
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 0.02em;
+
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 7px 18px rgba(20, 17, 19, 0.14);
+
+  transition:
+    transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 220ms ease,
+    background 220ms ease;
+}
+
+.profileButton:hover {
+  transform: translateY(-2px);
+
+  background:
+    linear-gradient(
+      145deg,
+      #3a3035,
+      #171419
+    );
+
+  box-shadow:
+    0 11px 24px rgba(20, 17, 19, 0.18);
+}
+
+/* =========================================================
+   SOFT DIVIDER BETWEEN NAV AND ACTIONS
+   ========================================================= */
+
+.actions::before {
+  content: "";
+
+  width: 1px;
+  height: 24px;
+
+  margin-right: 5px;
+
+  background: #e5dbd4;
+}
+
+/* =========================================================
+   DESKTOP COMFORT
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .container {
+    width: calc(100% - 36px);
+
+    grid-template-columns:
+      auto
+      1fr
+      auto;
+  }
+
+  .navLinks {
+    gap: 22px;
+  }
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .navbar {
+    height: 72px;
+  }
+
+  .container {
+    width: calc(100% - 28px);
+
+    grid-template-columns:
+      auto
+      1fr
+      auto;
+  }
+
+  .navLinks {
+    display: none;
+  }
+
+  .actions {
+    gap: 5px;
+  }
+
+  .actions::before {
+    display: none;
+  }
+
+  .iconButton,
+  .cartButton,
+  .navCountButton,
+  .profileButton {
+    width: 38px;
+    height: 38px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 520px) {
+  .navbar {
+    height: 68px;
+  }
+
+  .container {
+    width: calc(100% - 20px);
+  }
+
+  .logo {
+    font-size: 18px;
+    letter-spacing: 0.09em;
+  }
+
+  .iconButton,
+  .cartButton,
+  .navCountButton,
+  .profileButton {
+    width: 35px;
+    height: 35px;
+  }
+
+  .actions {
+    gap: 2px;
+  }
+
+  .cartCount,
+  .navCount {
+    top: -2px;
+    right: -1px;
+
+    min-width: 16px;
+    height: 16px;
+
+    font-size: 8px;
+  }
+}

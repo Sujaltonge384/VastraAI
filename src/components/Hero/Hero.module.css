@@ -1,0 +1,305 @@
+.hero {
+  min-height: calc(100vh - 72px);
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.25)
+    ),
+    url("/hero-fashion.png");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+
+  width: min(1400px, 92%);
+  margin: 0 auto;
+
+  color: white;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.content h1 {
+  font-size: clamp(56px, 8vw, 110px);
+  line-height: 0.95;
+  font-weight: 600;
+  letter-spacing: -4px;
+
+  margin-bottom: 28px;
+}
+
+.content h1 span {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.description {
+  max-width: 520px;
+
+  font-size: 17px;
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  margin-bottom: 35px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.primaryButton,
+.voiceButton {
+  min-height: 48px;
+
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 3px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.primaryButton {
+  background: #ffffff;
+  color: #111111;
+}
+
+.voiceButton {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+.primaryButton:hover,
+.voiceButton:hover {
+  transform: translateY(-2px);
+}
+
+.primaryButton:hover {
+  background: #f0f0f0;
+}
+
+.voiceButton:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+@media (max-width: 600px) {
+  .content h1 {
+    letter-spacing: -2px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .primaryButton,
+  .voiceButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.content {
+  position: absolute;
+  z-index: 2;
+
+  left: 60px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: min(650px, 48%);
+
+  margin: 0;
+
+  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  color: #ffffff;
+}
+.eyebrow {
+  margin: 0 0 18px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.content h1 {
+  margin: 0;
+
+  font-size: clamp(58px, 7vw, 96px);
+  line-height: 0.9;
+
+  font-weight: 700;
+
+  letter-spacing: -0.06em;
+
+  color: #ffffff;
+
+  text-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.18);
+}
+
+.content h1 span {
+  display: inline-block;
+
+  margin-top: 6px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 400;
+
+  color: #f06a72;
+
+  text-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.18);
+}
+
+.description {
+  max-width: 540px;
+
+  margin: 28px 0 34px;
+
+  font-size: 16px;
+  line-height: 1.75;
+
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  flex-wrap: wrap;
+}
+
+.primaryButton,
+.voiceButton {
+  min-height: 52px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 0 22px;
+
+  border-radius: 5px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.primaryButton {
+  background: #ffffff;
+  color: #111111;
+
+  border: 1px solid #ffffff;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.16);
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+
+  background: #f7f7f7;
+
+  box-shadow:
+    0 16px 35px rgba(0, 0, 0, 0.22);
+}
+
+.voiceButton {
+  background: rgba(255, 255, 255, 0.08);
+
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.58);
+
+  backdrop-filter: blur(10px);
+}
+
+.voiceButton:hover {
+  transform: translateY(-2px);
+
+  background: rgba(255, 255, 255, 0.16);
+
+  border-color: #ffffff;
+}
+
+.voiceButton:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 700px) {
+  .content h1 {
+    font-size: 54px;
+  }
+
+  .description {
+    font-size: 14px;
+    max-width: 420px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .primaryButton,
+  .voiceButton {
+    width: fit-content;
+  }
+}

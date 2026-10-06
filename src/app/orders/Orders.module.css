@@ -1,0 +1,754 @@
+/* =========================================================
+   VASTRAAI — ORDERS
+   Premium Editorial Fashion Theme
+   ========================================================= */
+
+.page {
+  min-height: calc(100vh - 78px);
+
+  padding: 70px 20px 105px;
+
+  background:
+    radial-gradient(
+      circle at 7% 8%,
+      rgba(246, 217, 201, 0.42),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 93% 14%,
+      rgba(238, 231, 247, 0.42),
+      transparent 25%
+    ),
+    #faf6f1;
+}
+
+.container {
+  width: min(1050px, 100%);
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.heading {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 34px;
+}
+
+.eyebrow {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin: 0 0 13px;
+
+  color: #e84e68;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+
+  width: 28px;
+
+  height: 1px;
+
+  background: currentColor;
+}
+
+.heading h1 {
+  margin: 0 0 8px;
+
+  color: #17151a;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(
+    42px,
+    5vw,
+    64px
+  );
+
+  font-weight: 500;
+
+  line-height: 0.96;
+
+  letter-spacing: -0.045em;
+}
+
+.heading p:last-child {
+  margin: 0;
+
+  color: #777179;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   ORDER COUNT
+   ========================================================= */
+
+.orderCount {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 34px;
+
+  padding: 0 13px;
+
+  border: 1px solid #e7dcd6;
+
+  border-radius: 999px;
+
+  background: #ffffff;
+
+  color: #5d555b;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+
+  box-shadow:
+    0 5px 15px rgba(40, 28, 25, 0.035);
+}
+
+/* =========================================================
+   ORDERS
+   ========================================================= */
+
+.orders {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+/* =========================================================
+   ORDER LINK
+   ========================================================= */
+
+.orderLink {
+  display: block;
+
+  color: inherit;
+
+  text-decoration: none;
+}
+
+/* =========================================================
+   ORDER CARD
+   ========================================================= */
+
+.orderCard {
+  overflow: hidden;
+
+  border: 1px solid #e8dfd8;
+
+  border-radius: 19px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 9px 26px rgba(40, 28, 25, 0.04);
+
+  transition:
+    transform 300ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 300ms ease,
+    border-color 220ms ease;
+}
+
+.orderLink:hover .orderCard {
+  transform: translateY(-4px);
+
+  border-color: #e1d3cf;
+
+  box-shadow:
+    0 20px 42px rgba(40, 28, 25, 0.08);
+}
+
+/* =========================================================
+   ORDER HEADER
+   ========================================================= */
+
+.orderHeader {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 22px;
+
+  padding: 21px 23px;
+
+  border-bottom: 1px solid #eee7e2;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #fffaf8
+    );
+}
+
+/* =========================================================
+   ORDER ID
+   ========================================================= */
+
+.orderId {
+  margin: 0;
+
+  color: #262126;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  line-height: 1.3;
+
+  letter-spacing: 0.06em;
+}
+
+.date {
+  margin: 5px 0 0;
+
+  color: #8a8188;
+
+  font-size: 10px;
+
+  line-height: 1.4;
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.status {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 31px;
+
+  padding: 0 12px;
+
+  border: 1px solid #efd9b8;
+
+  border-radius: 999px;
+
+  background: #fff7e9;
+
+  color: #a56c12;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+.delivered {
+  border-color: #cfe5d7;
+
+  background: #eff9f2;
+
+  color: #318858;
+}
+
+/* =========================================================
+   ORDER ITEMS
+   ========================================================= */
+
+.items {
+  padding: 4px 23px;
+}
+
+.item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 17px 0;
+
+  border-bottom: 1px solid #eee7e2;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.item img {
+  width: 76px;
+  height: 96px;
+
+  flex-shrink: 0;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f7f1ec,
+      #eee6df
+    );
+}
+
+/* =========================================================
+   ITEM INFO
+   ========================================================= */
+
+.itemInfo {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+
+  flex: 1;
+
+  min-width: 0;
+}
+
+.brand {
+  margin: 0;
+
+  color: #8a8188;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+.itemInfo h2 {
+  margin: 2px 0 4px;
+
+  overflow: hidden;
+
+  color: #252026;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 18px;
+
+  font-weight: 500;
+
+  line-height: 1.1;
+
+  letter-spacing: -0.025em;
+
+  display: -webkit-box;
+
+  -webkit-line-clamp: 2;
+
+  -webkit-box-orient: vertical;
+}
+
+.itemInfo span {
+  color: #756d73;
+
+  font-size: 10px;
+
+  line-height: 1.45;
+}
+
+.item > strong {
+  flex-shrink: 0;
+
+  color: #211d21;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   ORDER FOOTER
+   ========================================================= */
+
+.orderFooter {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 18px 23px;
+
+  border-top: 1px solid #eee7e2;
+
+  background:
+    #fdf9f6;
+}
+
+.orderFooter > div:first-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.orderFooter span {
+  color: #817980;
+
+  font-size: 9px;
+
+  line-height: 1.45;
+
+  letter-spacing: 0.03em;
+}
+
+.total {
+  color: #17151a;
+
+  font-size: 17px;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   EMPTY / LOADING / ERROR STATE
+   ========================================================= */
+
+.emptyPage {
+  min-height: calc(100vh - 78px);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 50px 20px;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 32%,
+      rgba(246, 217, 201, 0.42),
+      transparent 34%
+    ),
+    #faf6f1;
+
+  color: #211d21;
+}
+
+.emptyPage > svg {
+  width: 30px;
+  height: 30px;
+
+  padding: 15px;
+
+  border-radius: 50%;
+
+  background: #fbe7eb;
+
+  color: #e84e68;
+}
+
+.emptyPage h1 {
+  margin: 0;
+
+  color: #17151a;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(
+    35px,
+    5vw,
+    48px
+  );
+
+  font-weight: 500;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.04em;
+}
+
+.emptyPage p {
+  max-width: 410px;
+
+  margin: 0;
+
+  color: #777179;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.primaryButton {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 49px;
+
+  margin-top: 10px;
+
+  padding: 0 27px;
+
+  border: 1px solid #e84e68;
+
+  border-radius: 999px;
+
+  background: #e84e68;
+
+  color: #ffffff;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.13em;
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+
+  box-shadow:
+    0 10px 24px rgba(232, 78, 104, 0.17);
+
+  transition:
+    background 220ms ease,
+    transform 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.primaryButton:hover {
+  background: #d9425d;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 15px 30px rgba(232, 78, 104, 0.23);
+}
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.orderLink:focus-visible {
+  outline: 2px solid #e84e68;
+
+  outline-offset: 5px;
+
+  border-radius: 20px;
+}
+
+.primaryButton:focus-visible {
+  outline: 2px solid #e84e68;
+
+  outline-offset: 4px;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .page {
+    padding: 48px 14px 75px;
+  }
+
+  .heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    margin-bottom: 28px;
+  }
+
+  .orderHeader {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .status {
+    align-self: flex-start;
+  }
+
+  .orderHeader,
+  .orderFooter {
+    padding-left: 19px;
+    padding-right: 19px;
+  }
+
+  .items {
+    padding-left: 19px;
+    padding-right: 19px;
+  }
+
+  .item {
+    align-items: flex-start;
+  }
+
+  .item > strong {
+    margin-left: auto;
+  }
+
+  .orderFooter {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 12px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 430px) {
+  .page {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .heading h1 {
+    font-size: 38px;
+  }
+
+  .orderCard {
+    border-radius: 16px;
+  }
+
+  .item {
+    display: grid;
+
+    grid-template-columns:
+      68px minmax(0, 1fr);
+
+    gap: 11px;
+  }
+
+  .item img {
+    width: 68px;
+    height: 88px;
+
+    grid-row: span 2;
+  }
+
+  .itemInfo h2 {
+    font-size: 16px;
+  }
+
+  .item > strong {
+    grid-column: 2;
+
+    margin-left: 0;
+
+    align-self: end;
+  }
+
+  .orderFooter {
+    padding: 16px;
+  }
+
+  .total {
+    font-size: 15px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .orderCard,
+  .primaryButton {
+    transition: none;
+  }
+
+  .orderLink:hover .orderCard,
+  .primaryButton:hover {
+    transform: none;
+  }
+}

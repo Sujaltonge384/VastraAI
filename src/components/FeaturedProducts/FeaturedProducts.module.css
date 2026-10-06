@@ -1,0 +1,322 @@
+/* =========================================================
+   VASTRAAI — FEATURED PRODUCTS
+   Premium Editorial Fashion Theme
+   ========================================================= */
+
+.section {
+  width: min(1380px, calc(100% - 56px));
+
+  margin: 0 auto;
+
+  padding: 18px 0 118px;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 40px;
+
+  margin-bottom: 42px;
+}
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.eyebrow {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin: 0 0 14px;
+
+  color: #e84e68;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+
+  width: 30px;
+
+  height: 1px;
+
+  background: currentColor;
+}
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.header h2 {
+  margin: 0;
+
+  color: #17151a;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(
+    40px,
+    4.8vw,
+    64px
+  );
+
+  font-weight: 500;
+
+  line-height: 0.96;
+
+  letter-spacing: -0.045em;
+}
+
+/* =========================================================
+   VIEW ALL
+   ========================================================= */
+
+.viewAll {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 8px 0;
+
+  border: 0;
+
+  border-bottom: 1px solid #2a262b;
+
+  background: transparent;
+
+  color: #2a262b;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    color 220ms ease,
+    border-color 220ms ease,
+    transform 220ms ease;
+}
+
+.viewAll:hover {
+  color: #e84e68;
+
+  border-color: #e84e68;
+
+  transform: translateX(3px);
+}
+
+.viewAll:focus-visible {
+  outline: 2px solid #e84e68;
+
+  outline-offset: 6px;
+}
+
+/* =========================================================
+   PRODUCT GRID
+   ========================================================= */
+
+.grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+/* =========================================================
+   PRODUCT CARD IMAGE POLISH
+   This works around the ProductCard without changing
+   the ProductCard component itself.
+   ========================================================= */
+
+.grid > * {
+  min-width: 0;
+
+  transition:
+    transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.grid > *:hover {
+  transform: translateY(-4px);
+}
+
+/* =========================================================
+   LOADING STATE
+   ========================================================= */
+
+.loading {
+  min-height: 300px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #777179;
+
+  font-size: 13px;
+
+  letter-spacing: 0.02em;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .section {
+    width: calc(100% - 40px);
+
+    padding-bottom: 96px;
+  }
+
+  .grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+  }
+
+  .header h2 {
+    font-size: 48px;
+  }
+}
+
+/* =========================================================
+   SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 820px) {
+  .header {
+    align-items: flex-start;
+
+    gap: 24px;
+  }
+
+  .grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+  }
+
+  .header h2 {
+    font-size: 44px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .section {
+    width: calc(100% - 24px);
+
+    padding: 14px 0 76px;
+  }
+
+  .header {
+    align-items: flex-start;
+
+    margin-bottom: 30px;
+  }
+
+  .header h2 {
+    font-size: 40px;
+  }
+
+  .viewAll {
+    margin-top: 5px;
+
+    font-size: 10px;
+
+    white-space: nowrap;
+  }
+
+  .grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+  }
+
+  .grid > *:hover {
+    transform: none;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+  .section {
+    width: calc(100% - 20px);
+  }
+
+  .header {
+    gap: 16px;
+  }
+
+  .header h2 {
+    font-size: 34px;
+  }
+
+  .grid {
+    gap: 10px;
+  }
+
+  .viewAll {
+    font-size: 9px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .viewAll,
+  .grid > * {
+    transition: none;
+  }
+
+  .grid > *:hover {
+    transform: none;
+  }
+}

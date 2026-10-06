@@ -1,0 +1,457 @@
+/* =========================================================
+   VASTRAAI — LOGIN
+   Premium Editorial Fashion Theme
+   ========================================================= */
+
+.page {
+  min-height: calc(100vh - 78px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 72px 20px 90px;
+
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(246, 217, 201, 0.52),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(238, 231, 247, 0.48),
+      transparent 27%
+    ),
+    #faf6f1;
+}
+
+/* =========================================================
+   LOGIN CARD
+   ========================================================= */
+
+.card {
+  position: relative;
+
+  width: min(440px, 100%);
+
+  padding: 42px;
+
+  border: 1px solid #e8dfd8;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.97),
+      rgba(255, 249, 246, 0.95)
+    );
+
+  box-shadow:
+    0 25px 70px rgba(40, 28, 25, 0.09);
+
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+
+  position: absolute;
+
+  top: -100px;
+  right: -100px;
+
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(232, 78, 104, 0.10),
+      transparent 68%
+    );
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+  position: relative;
+
+  z-index: 1;
+
+  text-align: center;
+
+  margin-bottom: 30px;
+}
+
+.eyebrow {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 14px;
+
+  color: #e84e68;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+}
+
+.eyebrow::before,
+.eyebrow::after {
+  content: "";
+
+  width: 22px;
+
+  height: 1px;
+
+  background: currentColor;
+}
+
+.header h1 {
+  margin: 0 0 9px;
+
+  color: #17151a;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(36px, 5vw, 48px);
+
+  font-weight: 500;
+
+  line-height: 0.96;
+
+  letter-spacing: -0.045em;
+}
+
+.header p {
+  max-width: 330px;
+
+  margin: 0 auto;
+
+  color: #777179;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.form {
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.field {
+  width: 100%;
+}
+
+.label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #494249;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+}
+
+.input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  min-height: 50px;
+
+  padding: 0 15px;
+
+  border: 1px solid #ddd4ce;
+
+  border-radius: 11px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #252126;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 13px;
+
+  transition:
+    border-color 200ms ease,
+    background 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.input::placeholder {
+  color: #aaa2a7;
+}
+
+.input:hover {
+  border-color: #cfc3bc;
+}
+
+.input:focus {
+  border-color: #e84e68;
+
+  background: #fffdfc;
+
+  box-shadow:
+    0 0 0 3px rgba(232, 78, 104, 0.09);
+}
+
+.input:disabled {
+  background: #f6f2ef;
+
+  color: #989096;
+
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.error {
+  margin: -3px 0 0;
+
+  padding: 11px 13px;
+
+  border: 1px solid #f1cdd3;
+
+  border-radius: 10px;
+
+  background: #fff3f5;
+
+  color: #d0445d;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+
+.submit {
+  width: 100%;
+
+  min-height: 53px;
+
+  margin-top: 3px;
+
+  border: 1px solid #e84e68;
+
+  border-radius: 12px;
+
+  background: #e84e68;
+
+  color: #ffffff;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 24px rgba(232, 78, 104, 0.18);
+
+  transition:
+    background 220ms ease,
+    border-color 220ms ease,
+    transform 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.submit:hover:not(:disabled) {
+  background: #d9425d;
+
+  border-color: #d9425d;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 15px 30px rgba(232, 78, 104, 0.24);
+}
+
+.submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submit:disabled {
+  background: #d9b3bb;
+
+  border-color: #d9b3bb;
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+  position: relative;
+
+  z-index: 1;
+
+  margin-top: 25px;
+
+  padding-top: 22px;
+
+  border-top: 1px solid #ece4df;
+
+  color: #817980;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+
+  text-align: center;
+}
+
+.link {
+  color: #e84e68;
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition: color 200ms ease;
+}
+
+.link:hover {
+  color: #c93d56;
+
+  text-decoration: underline;
+}
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.input:focus-visible,
+.submit:focus-visible,
+.link:focus-visible {
+  outline: 2px solid #e84e68;
+
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .page {
+    min-height: calc(100vh - 78px);
+
+    padding: 42px 14px 70px;
+  }
+
+  .card {
+    padding: 30px 22px;
+
+    border-radius: 20px;
+  }
+
+  .header {
+    margin-bottom: 26px;
+  }
+
+  .header h1 {
+    font-size: 38px;
+  }
+
+  .header p {
+    font-size: 11px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .card {
+    padding: 28px 18px;
+  }
+
+  .header h1 {
+    font-size: 34px;
+  }
+
+  .input {
+    min-height: 48px;
+  }
+
+  .submit {
+    min-height: 51px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .submit {
+    transition: none;
+  }
+
+  .submit:hover:not(:disabled) {
+    transform: none;
+  }
+}

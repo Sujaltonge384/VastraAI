@@ -1,0 +1,699 @@
+/* =========================================================
+   VASTRAAI — PRODUCTS / COLLECTION
+   Premium Editorial Fashion Theme
+   ========================================================= */
+
+.page {
+  min-height: calc(100vh - 78px);
+
+  padding: 72px 0 100px;
+
+  background:
+    radial-gradient(
+      circle at 7% 5%,
+      rgba(246, 217, 201, 0.38),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 94% 10%,
+      rgba(238, 231, 247, 0.38),
+      transparent 24%
+    ),
+    #faf6f1;
+}
+
+.container {
+  width: min(1400px, calc(100% - 56px));
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   TOP HEADER
+   ========================================================= */
+
+.top {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 35px;
+
+  margin-bottom: 44px;
+}
+
+.eyebrow {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin: 0 0 14px;
+
+  color: #e84e68;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+
+  width: 29px;
+
+  height: 1px;
+
+  background: currentColor;
+}
+
+.top h1 {
+  margin: 0;
+
+  color: #17151a;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(
+    44px,
+    5.4vw,
+    72px
+  );
+
+  font-weight: 500;
+
+  line-height: 0.94;
+
+  letter-spacing: -0.05em;
+}
+
+.count {
+  margin: 11px 0 0;
+
+  color: #827980;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   SORT
+   ========================================================= */
+
+.sort {
+  min-width: 195px;
+
+  height: 44px;
+
+  padding: 0 13px;
+
+  border: 1px solid #ded5cf;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  color: #383238;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 18px rgba(40, 28, 25, 0.035);
+
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    background 200ms ease;
+}
+
+.sort:hover {
+  border-color: #d0c2bb;
+
+  background: #ffffff;
+}
+
+.sort:focus {
+  border-color: #e84e68;
+
+  box-shadow:
+    0 0 0 3px rgba(232, 78, 104, 0.09);
+}
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.content {
+  display: grid;
+
+  grid-template-columns: 225px minmax(0, 1fr);
+
+  gap: 42px;
+
+  align-items: start;
+}
+
+/* =========================================================
+   FILTER SIDEBAR
+   ========================================================= */
+
+.filters {
+  position: sticky;
+
+  top: 96px;
+
+  padding-right: 28px;
+
+  border-right: 1px solid #e7ded8;
+}
+
+.filters h3 {
+  margin: 0 0 29px;
+
+  color: #211d21;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 25px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: -0.03em;
+}
+
+/* =========================================================
+   FILTER GROUP
+   ========================================================= */
+
+.filterGroup {
+  margin-bottom: 26px;
+
+  padding-bottom: 25px;
+
+  border-bottom: 1px solid #ebe3de;
+}
+
+.filterGroup:last-of-type {
+  border-bottom: none;
+}
+
+.filterGroup h4 {
+  margin: 0 0 15px;
+
+  color: #332d33;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   FILTER LABEL
+   ========================================================= */
+
+.filterGroup label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 11px;
+
+  color: #716970;
+
+  font-size: 11px;
+
+  line-height: 1.45;
+
+  cursor: pointer;
+
+  transition:
+    color 180ms ease;
+}
+
+.filterGroup label:hover {
+  color: #e84e68;
+}
+
+.filterGroup input {
+  width: 15px;
+  height: 15px;
+
+  flex-shrink: 0;
+
+  accent-color: #e84e68;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   CLEAR FILTERS
+   ========================================================= */
+
+.clearFilters {
+  width: 100%;
+
+  min-height: 45px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 5px;
+
+  padding: 0 15px;
+
+  border: 1px solid #ddd2cb;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #5f575d;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    background 220ms ease,
+    color 220ms ease,
+    border-color 220ms ease,
+    transform 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.clearFilters:hover {
+  background: #fff7f8;
+
+  color: #e84e68;
+
+  border-color: #e4c7cd;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 9px 20px rgba(232, 78, 104, 0.08);
+}
+
+.clearFilters:active {
+  transform: translateY(0);
+
+  box-shadow: none;
+}
+
+/* =========================================================
+   PRODUCT GRID
+   ========================================================= */
+
+.grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 34px 20px;
+}
+
+/* =========================================================
+   PAGINATION
+   ========================================================= */
+
+.pagination {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 16px;
+
+  margin: 55px 0 25px;
+}
+
+.paginationButton {
+  min-width: 105px;
+
+  min-height: 42px;
+
+  padding: 0 18px;
+
+  border: 1px solid #ddd3cd;
+
+  border-radius: 999px;
+
+  background: #ffffff;
+
+  color: #3f383e;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.11em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    background 220ms ease,
+    color 220ms ease,
+    border-color 220ms ease,
+    transform 220ms ease;
+}
+
+.paginationButton:hover:not(:disabled) {
+  background: #e84e68;
+
+  color: #ffffff;
+
+  border-color: #e84e68;
+
+  transform: translateY(-2px);
+}
+
+.paginationButton:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.paginationButton:disabled {
+  opacity: 0.38;
+
+  cursor: not-allowed;
+}
+
+.paginationInfo {
+  min-width: 90px;
+
+  color: #817980;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.1em;
+
+  text-align: center;
+
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   NO RESULTS
+   ========================================================= */
+
+.noResults {
+  min-height: 400px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 40px;
+
+  border: 1px solid #e8dfd8;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.88);
+
+  text-align: center;
+
+  color: #777179;
+}
+
+.noResults h2 {
+  margin: 0 0 8px;
+
+  color: #211d21;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 31px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: -0.035em;
+}
+
+.noResults p {
+  margin: 0;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.sort:focus-visible,
+.filterGroup input:focus-visible,
+.clearFilters:focus-visible,
+.paginationButton:focus-visible {
+  outline: 2px solid #e84e68;
+
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   LARGE TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .container {
+    width: calc(100% - 40px);
+  }
+
+  .content {
+    grid-template-columns: 195px minmax(0, 1fr);
+
+    gap: 28px;
+  }
+
+  .grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    gap: 28px 17px;
+  }
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .content {
+    grid-template-columns: 175px minmax(0, 1fr);
+
+    gap: 24px;
+  }
+
+  .filters {
+    padding-right: 22px;
+  }
+
+  .grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 26px 14px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .page {
+    padding: 46px 0 80px;
+  }
+
+  .container {
+    width: calc(100% - 24px);
+  }
+
+  .top {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    margin-bottom: 32px;
+  }
+
+  .top h1 {
+    font-size: 45px;
+  }
+
+  .sort {
+    width: 100%;
+  }
+
+  .content {
+    display: block;
+  }
+
+  .filters {
+    position: static;
+
+    padding: 0 0 22px;
+
+    margin-bottom: 27px;
+
+    border-right: none;
+
+    border-bottom: 1px solid #e7ded8;
+  }
+
+  .filters h3 {
+    margin-bottom: 22px;
+
+    font-size: 23px;
+  }
+
+  .filterGroup {
+    margin-bottom: 21px;
+
+    padding-bottom: 20px;
+  }
+
+  .grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 25px 11px;
+  }
+
+  .pagination {
+    gap: 10px;
+
+    margin-top: 45px;
+  }
+
+  .paginationButton {
+    min-width: 92px;
+  }
+
+  .paginationInfo {
+    min-width: 70px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+  .container {
+    width: calc(100% - 18px);
+  }
+
+  .top h1 {
+    font-size: 39px;
+  }
+
+  .count {
+    font-size: 10px;
+  }
+
+  .grid {
+    gap: 22px 9px;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+  }
+
+  .paginationInfo {
+    order: -1;
+
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .clearFilters,
+  .paginationButton {
+    transition: none;
+  }
+
+  .clearFilters:hover,
+  .paginationButton:hover:not(:disabled) {
+    transform: none;
+  }
+}

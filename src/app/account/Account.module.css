@@ -1,0 +1,742 @@
+/* =========================================================
+   VASTRAAI — ACCOUNT PAGE
+   Premium Editorial Fashion Theme
+   ========================================================= */
+
+.page {
+  min-height: calc(100vh - 78px);
+
+  padding: 72px 20px 100px;
+
+  background:
+    radial-gradient(
+      circle at 8% 8%,
+      rgba(246, 217, 201, 0.48),
+      transparent 26%
+    ),
+    radial-gradient(
+      circle at 92% 18%,
+      rgba(238, 231, 247, 0.48),
+      transparent 25%
+    ),
+    #faf6f1;
+}
+
+.container {
+  width: min(1080px, 100%);
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   PROFILE HEADER
+   ========================================================= */
+
+.header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 24px;
+
+  padding: 34px;
+
+  margin-bottom: 26px;
+
+  border: 1px solid #e8dfd8;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.92),
+      rgba(255, 248, 245, 0.94)
+    );
+
+  box-shadow:
+    0 16px 45px rgba(40, 28, 25, 0.06);
+}
+
+/* =========================================================
+   AVATAR
+   ========================================================= */
+
+.avatar {
+  width: 76px;
+  height: 76px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #211d21,
+      #494048
+    );
+
+  color: #ffffff;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 30px;
+
+  font-weight: 500;
+
+  box-shadow:
+    0 10px 24px rgba(25, 20, 22, 0.14);
+}
+
+/* =========================================================
+   WELCOME TEXT
+   ========================================================= */
+
+.welcome {
+  margin: 0 0 7px;
+
+  color: #e84e68;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   USER NAME
+   ========================================================= */
+
+.header h1 {
+  margin: 0 0 7px;
+
+  color: #17151a;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(30px, 4vw, 42px);
+
+  font-weight: 500;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.04em;
+}
+
+/* =========================================================
+   EMAIL
+   ========================================================= */
+
+.email {
+  margin: 0;
+
+  color: #777179;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   ACCOUNT NAVIGATION
+   ========================================================= */
+
+.grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+/* =========================================================
+   NAV CARD
+   ========================================================= */
+
+.card {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  min-height: 116px;
+
+  padding: 24px;
+
+  overflow: hidden;
+
+  border: 1px solid #e8dfd8;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  color: #211d21;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 8px 25px rgba(40, 28, 25, 0.035);
+
+  transition:
+    transform 300ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 220ms ease,
+    box-shadow 300ms ease,
+    background 220ms ease;
+}
+
+.card::after {
+  content: "";
+
+  position: absolute;
+
+  right: -34px;
+  bottom: -42px;
+
+  width: 120px;
+  height: 120px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(232, 78, 104, 0.10),
+      transparent 68%
+    );
+
+  opacity: 0;
+
+  transition: opacity 300ms ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+
+  border-color: #e7ccd1;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #fff9f8
+    );
+
+  box-shadow:
+    0 18px 40px rgba(40, 28, 25, 0.085);
+}
+
+.card:hover::after {
+  opacity: 1;
+}
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.card svg {
+  position: relative;
+
+  z-index: 1;
+
+  flex-shrink: 0;
+
+  width: 22px;
+  height: 22px;
+
+  padding: 11px;
+
+  box-sizing: content-box;
+
+  border-radius: 13px;
+
+  background: #fbe7eb;
+
+  color: #e84e68;
+}
+
+/* =========================================================
+   CARD TEXT
+   ========================================================= */
+
+.card div {
+  position: relative;
+
+  z-index: 1;
+}
+
+.card h2 {
+  margin: 0 0 6px;
+
+  color: #211d21;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 20px;
+
+  font-weight: 500;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.025em;
+}
+
+.card p {
+  margin: 0;
+
+  color: #817980;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   ACCOUNT INFORMATION
+   ========================================================= */
+
+.accountSection {
+  margin-top: 26px;
+
+  padding: 30px;
+
+  border: 1px solid #e8dfd8;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  box-shadow:
+    0 10px 30px rgba(40, 28, 25, 0.04);
+}
+
+.accountSection h2 {
+  margin: 0 0 18px;
+
+  color: #211d21;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 27px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: -0.035em;
+}
+
+/* =========================================================
+   INFO ROW
+   ========================================================= */
+
+.infoRow {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 24px;
+
+  padding: 16px 0;
+
+  border-bottom: 1px solid #eee6e0;
+}
+
+.infoRow:last-child {
+  border-bottom: none;
+}
+
+.infoRow span {
+  color: #8a8188;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+}
+
+.infoRow strong {
+  max-width: 70%;
+
+  color: #2a252a;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  text-align: right;
+
+  word-break: break-word;
+}
+
+/* =========================================================
+   LOGOUT
+   ========================================================= */
+
+.logoutButton {
+  width: 100%;
+
+  min-height: 52px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-top: 18px;
+
+  padding: 14px 20px;
+
+  border: 1px solid #e6d5d8;
+
+  border-radius: 12px;
+
+  background: #fff8f8;
+
+  color: #d34862;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    background 220ms ease,
+    color 220ms ease,
+    border-color 220ms ease,
+    transform 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.logoutButton:hover {
+  background: #e84e68;
+
+  border-color: #e84e68;
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 24px rgba(232, 78, 104, 0.18);
+}
+
+.logoutButton:active {
+  transform: translateY(0);
+}
+
+/* =========================================================
+   LOGIN REQUIRED
+   ========================================================= */
+
+.loginRequired {
+  min-height: calc(100vh - 78px);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 50px 20px;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 25%,
+      rgba(246, 217, 201, 0.45),
+      transparent 32%
+    ),
+    #faf6f1;
+
+  color: #211d21;
+}
+
+.loginRequired > svg {
+  width: 34px;
+  height: 34px;
+
+  margin-bottom: 6px;
+
+  padding: 16px;
+
+  border-radius: 50%;
+
+  background: #fbe7eb;
+
+  color: #e84e68;
+}
+
+.loginRequired h1 {
+  margin: 0;
+
+  color: #17151a;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(34px, 5vw, 48px);
+
+  font-weight: 500;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.04em;
+}
+
+.loginRequired p {
+  max-width: 420px;
+
+  margin: 0;
+
+  color: #777179;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+.loginButton {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+
+  margin-top: 12px;
+
+  padding: 0 28px;
+
+  border-radius: 999px;
+
+  background: #e84e68;
+
+  color: #ffffff;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.13em;
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+
+  box-shadow:
+    0 10px 24px rgba(232, 78, 104, 0.18);
+
+  transition:
+    background 220ms ease,
+    transform 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.loginButton:hover {
+  background: #d9425d;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 28px rgba(232, 78, 104, 0.24);
+}
+
+/* =========================================================
+   FOCUS ACCESSIBILITY
+   ========================================================= */
+
+.card:focus-visible,
+.logoutButton:focus-visible,
+.loginButton:focus-visible {
+  outline: 2px solid #e84e68;
+
+  outline-offset: 4px;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+  .page {
+    padding-top: 54px;
+  }
+
+  .header {
+    padding: 28px;
+  }
+
+  .grid {
+    gap: 12px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+  .page {
+    padding: 38px 14px 70px;
+  }
+
+  .header {
+    align-items: flex-start;
+
+    gap: 18px;
+
+    padding: 22px;
+
+    border-radius: 18px;
+  }
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+
+    font-size: 24px;
+  }
+
+  .header h1 {
+    font-size: 30px;
+  }
+
+  .email {
+    font-size: 11px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .card {
+    min-height: 96px;
+
+    padding: 19px;
+  }
+
+  .card h2 {
+    font-size: 18px;
+  }
+
+  .accountSection {
+    padding: 24px 20px;
+  }
+
+  .accountSection h2 {
+    font-size: 24px;
+  }
+
+  .infoRow {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 7px;
+  }
+
+  .infoRow strong {
+    max-width: 100%;
+
+    text-align: left;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .card svg {
+    width: 20px;
+    height: 20px;
+
+    padding: 10px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .logoutButton,
+  .loginButton {
+    transition: none;
+  }
+
+  .card:hover,
+  .logoutButton:hover,
+  .loginButton:hover {
+    transform: none;
+  }
+}
