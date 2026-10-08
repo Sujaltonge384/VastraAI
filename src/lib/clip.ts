@@ -1,15 +1,23 @@
 import {
   pipeline,
   RawImage,
+  env,
 } from "@huggingface/transformers";
 
 let extractorPromise: Promise<any> | null = null;
+
+env.allowRemoteModels = true;
+env.useFSCache = true;
+env.cacheDir = "/tmp/transformers-cache";
 
 export async function getImageExtractor() {
   if (!extractorPromise) {
     extractorPromise = pipeline(
       "image-feature-extraction",
-      "Xenova/clip-vit-base-patch32"
+      "Xenova/clip-vit-base-patch32",
+      {
+        dtype: "q4",
+      }
     );
   }
 
