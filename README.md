@@ -421,32 +421,6 @@ VastraAI/
 ├── package.json
 └── README.md
 ```
-## Architecture
-
-```mermaid
-flowchart TD
-    Shopper[Shopper in browser] --> UI[Next.js App Router UI]
-    UI --> Auth[Better Auth]
-    UI --> API[Next.js API routes]
-
-    API --> ProductAPI[Product and shopping APIs]
-    ProductAPI --> DB[(PostgreSQL via Prisma)]
-
-    API --> Search[AI natural-language search]
-    Search --> Gemini[Gemini API]
-    Gemini --> Filters[Structured search filters]
-    Filters --> DB
-
-    UI --> Speech[Web Speech API]
-    Speech --> Voice[Voice command API]
-    Voice --> Gemini
-
-    UI --> Upload[Image upload]
-    Upload --> CLIP[CLIP image feature extraction]
-    CLIP --> Embedding[512-dimensional embedding]
-    Embedding --> VectorSearch[pgvector similarity query]
-    VectorSearch --> DB
-```
 
 ---
 
