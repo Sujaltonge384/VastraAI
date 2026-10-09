@@ -196,7 +196,6 @@ The repository currently contains fashion artwork, but the full application scre
   | 📝 Register | `register.png` | Create-account form and registration interface |
   | 👤 User profile | `profile.png` | Profile details and account options |
   | 🛍️ Shopping bag | `shopping-bag.png` | Selected products and quantity controls in the shopping bag |
-  | 🧺 Cart | `cart.png` | Cart items, price summary, quantity controls, and remove options |
   | 💳 Checkout | `checkout.png` | Checkout form, order summary, and order placement |
 
   To capture your actual screens on Windows, open the page in Chrome and press **Win + Shift + S**. Save the captured images in `docs/screenshots/`.
