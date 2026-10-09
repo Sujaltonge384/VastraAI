@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/hero-fashion-cover.svg" alt="VastraAI — Discover Fashion. Search Smarter. Shop with AI." width="100%" />
+  <img src="public/VastraAI.png" alt="VastraAI — Discover Fashion. Search Smarter. Shop with AI." width="100%" />
 </p>
 
 <h1 align="center">VastraAI ✨</h1>
