@@ -1,112 +1,426 @@
 <p align="center">
-  <img src="public/hero-fashion.png" alt="VastraAI fashion campaign artwork" width="100%" />
+  <img src="public/hero-fashion.png" alt="VastraAI Fashion" width="100%" />
 </p>
 
-<h1 align="center">VastraAI</h1>
+<h1 align="center">VastraAI ✨</h1>
+
+<h3 align="center">
+  Discover Fashion. Search Smarter. Shop with AI.
+</h3>
 
 <p align="center">
-  <strong>AI-powered fashion discovery and e-commerce</strong><br />
-  Search with natural language, find visually similar products, and shop with voice-assisted controls.
+  An AI-powered fashion e-commerce platform that combines intelligent
+  product discovery, visual similarity search, and voice-assisted shopping
+  in one modern shopping experience.
 </p>
 
 <p align="center">
-  <a href="https://vastra-ai-beta.vercel.app"><strong>Live Demo</strong></a>
-  ·
-  <a href="https://github.com/Sujaltonge384/VastraAI"><strong>Source Code</strong></a>
+  <a href="https://vastra-ai-beta.vercel.app">
+    <img src="https://img.shields.io/badge/🚀_Live_Demo-Visit_VastraAI-e84e68?style=for-the-badge" alt="Live Demo" />
+  </a>
+  <a href="https://github.com/Sujaltonge384/VastraAI">
+    <img src="https://img.shields.io/badge/Source_Code-GitHub-181717?style=for-the-badge&logo=github" alt="Source Code" />
+  </a>
 </p>
 
 <p align="center">
-  <img alt="Next.js" src="https://img.shields.io/badge/Next.js-16-black?logo=next.js" />
-  <img alt="React" src="https://img.shields.io/badge/React-19-149eca?logo=react" />
-  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5-3178c6?logo=typescript" />
-  <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-pgvector-4169e1?logo=postgresql" />
-  <img alt="Deployment" src="https://img.shields.io/badge/Deployment-Vercel-black?logo=vercel" />
+  <img src="https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js" alt="Next.js" />
+  <img src="https://img.shields.io/badge/React-19-149eca?style=flat-square&logo=react" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white" alt="Prisma" />
+  <img src="https://img.shields.io/badge/Gemini_AI-8E75B2?style=flat-square&logo=googlegemini&logoColor=white" alt="Gemini" />
+  <img src="https://img.shields.io/badge/Deployed_on-Vercel-black?style=flat-square&logo=vercel" alt="Vercel" />
 </p>
 
-## Overview
+---
 
-**VastraAI** is a full-stack fashion shopping application that combines familiar e-commerce workflows with AI-based product discovery. In addition to browsing a product catalogue, shoppers can describe what they want in everyday language, upload a reference image to discover similar products, and use a microphone-driven assistant for supported shopping commands.
+## 💫 The Idea Behind VastraAI
 
-The application is built with the Next.js App Router and TypeScript. PostgreSQL stores the product catalogue and shopping data; Prisma manages database access; Gemini powers natural-language understanding; and CLIP embeddings with pgvector power visual similarity search.
+Imagine finding the perfect outfit without scrolling through hundreds of products.
 
-> **Live demo:** [vastra-ai-beta.vercel.app](https://vastra-ai-beta.vercel.app)
+What if you could describe the clothes you want, upload a picture for inspiration, or simply tell your shopping assistant what to do?
 
-## Features
+**That is the experience VastraAI aims to create.**
 
-### AI product discovery
+VastraAI is a full-stack fashion shopping application that brings together traditional e-commerce functionality and AI-powered discovery. Instead of relying only on keywords and filters, users can explore products through natural-language queries, visual similarity search, and a voice-driven shopping assistant.
 
-- **Natural-language search:** Describe an item or set of preferences in a sentence, such as “black shirts under ₹1,500” or “best-rated sneakers.” Gemini converts the request into structured filters that are applied to the product catalogue.
-- **Visual similarity search:** Upload a product or outfit image to retrieve visually similar catalogue items. The backend uses the CLIP image-feature model and ranks products using vector similarity in PostgreSQL with pgvector.
-- **Product browsing:** Browse the catalogue and product details, with category and product search flows.
-- **Voice shopping assistant:** Use the microphone control to issue supported commands for navigation, product search, cart changes, quantity updates, and checkout shortcuts. Speech recognition depends on browser support and microphone permission.
-- **Shopping workflows:** Email/password authentication, bag/cart, wishlist, addresses, checkout, and order history.
-- **Action feedback:** Shared top-right toast notifications provide visible confirmation for supported cart and wishlist actions. Voice-triggered actions use the same notification store when the action is successfully recognized and completed.
+The project combines a modern web application, a relational database, AI model inference, and vector search in one integrated system.
 
-### Visual search details
+<p align="center">
+  <strong>🛍️ E-commerce &nbsp;·&nbsp; 🧠 Generative AI &nbsp;·&nbsp; 🖼️ Computer Vision &nbsp;·&nbsp; 🎙️ Voice Interaction</strong>
+</p>
 
-The visual-search implementation uses:
+---
 
-- **Model:** `Xenova/clip-vit-base-patch32` via `@huggingface/transformers`
-- **Inference dtype:** `q4` quantized model configuration
-- **Embedding size:** 512 values per image embedding
-- **Retrieval:** PostgreSQL + pgvector distance ordering
-- **Response:** Up to 20 nearest product matches
+## ⚡ What Makes VastraAI Different?
 
-The production visual-search endpoint was manually tested with an image upload and returned `HTTP 200` with 20 product results. Similarity quality depends on the available catalogue and the visual embeddings stored in the database.
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🧠 AI-Powered Search</h3>
+      Describe what you want in everyday language. Gemini interprets product types, colours, budgets, sizes, and sorting preferences to help retrieve relevant products.
+    </td>
+    <td width="50%" valign="top">
+      <h3>🖼️ Visual Similarity Search</h3>
+      Upload a reference image and discover visually similar products using CLIP image embeddings and PostgreSQL vector similarity search.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🎙️ Voice Shopping Assistant</h3>
+      Use microphone-based commands for supported shopping operations, navigation, cart management, and checkout shortcuts.
+    </td>
+    <td width="50%" valign="top">
+      <h3>💗 Modern Shopping Experience</h3>
+      Explore product cards, product details, a shopping bag, wishlist, checkout, addresses, and order history through a responsive web interface.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🔔 Instant Action Feedback</h3>
+      Shared toast notifications provide visible feedback when supported cart and wishlist actions succeed.
+    </td>
+    <td width="50%" valign="top">
+      <h3>☁️ Full-Stack Deployment</h3>
+      A production-deployed Next.js application connecting API routes, authentication, PostgreSQL, and AI-powered services.
+    </td>
+  </tr>
+</table>
 
-## Demo walkthrough
+---
 
-Start with the live site, then try these flows:
+## 🚀 Explore the Features
 
-| Flow | What to try | Open |
-| --- | --- | --- |
-| Storefront | Explore the fashion landing page and categories. | [Home](https://vastra-ai-beta.vercel.app/) |
-| Product catalogue | Browse products and open a product detail page. | [Products](https://vastra-ai-beta.vercel.app/products) |
-| Natural-language search | Search with a phrase containing product type, colour, price, size, or sort preference. | [Search](https://vastra-ai-beta.vercel.app/search) |
-| Visual search | Upload a clear product image and inspect the matching results. | [Visual Search](https://vastra-ai-beta.vercel.app/visual-search) |
-| Cart and checkout | Add a product, then review the bag and checkout flow. | [Cart](https://vastra-ai-beta.vercel.app/cart) |
-| Wishlist | Save products and review saved items. | [Wishlist](https://vastra-ai-beta.vercel.app/wishlist) |
-| Voice assistant | Use the floating microphone control and try a supported command on a product page. | [Live Demo](https://vastra-ai-beta.vercel.app/) |
+### 1. 🔎 Search by Meaning, Not Just Keywords
 
-Some shopping actions require signing in. Voice recognition works only in browsers that provide the required Web Speech API and when microphone access is allowed.
+Traditional product search often requires users to know the exact product name.
 
-## Screenshots
+VastraAI adds a natural-language search layer powered by Gemini.
 
-The repository currently contains the fashion artwork used by the application, but **does not yet contain captured screenshots of the rendered application pages**. The cover image above is artwork—not a fabricated browser screenshot. Add screenshots from the live or local app here when available.
+**Try queries like:**
 
-Suggested screenshot gallery:
+- `Show black shirts under 1500`
+- `Find blue jeans`
+- `Show the cheapest sneakers`
+- `Find the best-rated shirts`
+- `Show white dresses in size M`
 
-| Screenshot to capture | What it should demonstrate | Save as |
-| --- | --- | --- |
-| Home page | Navigation, hero area, categories, and featured products | `docs/screenshots/home.png` |
-| Product catalogue | Product cards, prices, ratings, and browsing controls | `docs/screenshots/products.png` |
-| AI visual search | Uploaded reference image and returned matching products | `docs/screenshots/visual-search.png` |
-| Voice shopping | Floating microphone and recognized command | `docs/screenshots/voice-shopping.png` |
-| Cart confirmation | Top-right toast showing a product name after a voice action | `docs/screenshots/voice-cart-toast.png` |
-| Wishlist confirmation | Wishlist state and top-right confirmation toast | `docs/screenshots/voice-wishlist-toast.png` |
+The AI converts the request into structured search criteria, which are then used to query the product catalogue.
 
-To add them, create `docs/screenshots/`, save genuine screenshots using the filenames above, then embed them with Markdown, for example:
+### 2. 🖼️ Find Products Using an Image
 
-```md
-![VastraAI visual search](docs/screenshots/visual-search.png)
+Sometimes it is easier to show what you want than to describe it.
+
+VastraAI's visual-search pipeline uses the CLIP image-feature model to represent an uploaded image as a numerical embedding. PostgreSQL with pgvector compares that embedding with stored product embeddings and ranks the nearest matches.
+
+**How it works:**
+
+1. Upload a product or outfit reference image.
+2. The server processes the image using CLIP.
+3. A 512-dimensional image embedding is generated.
+4. The embedding is compared with stored product vectors.
+5. The API returns up to 20 matching products.
+
+**Visual-search implementation:**
+
+| Component | Implementation |
+|---|---|
+| Image model | `Xenova/clip-vit-base-patch32` |
+| Model library | Hugging Face Transformers.js |
+| Inference configuration | `q4` quantized model |
+| Embedding dimension | 512 |
+| Vector database | PostgreSQL with pgvector |
+| Similarity ranking | Vector distance ordering |
+| API route | `/api/ai/visual-search` |
+
+The production endpoint has been tested with a real image upload and returned `HTTP 200` with 20 product results. The relevance of the matches depends on the image and the embeddings available in the catalogue.
+
+### 3. 🎙️ Shop with Your Voice
+
+VastraAI includes a floating microphone control connected to a voice-command pipeline.
+
+The browser's Web Speech API captures speech, and the application converts the recognized command into a supported shopping action. Gemini is used to interpret commands that require contextual understanding.
+
+**Example commands:**
+
+| Say this | Intended action |
+|---|---|
+| “Open my bag” | Navigate to the shopping cart |
+| “Go to women's collection” | Open the women's product collection |
+| “Show me black shirts” | Search for black shirts |
+| “Add this product to my bag” | Add the current product to the cart |
+| “Remove this product from my bag” | Remove a matching cart item |
+| “Open my wishlist” | Navigate to saved products |
+| “Go to checkout” | Open the checkout page |
+
+The assistant also contains handlers for supported quantity updates and checkout shortcuts.
+
+> Voice recognition depends on browser support, microphone permissions, and the command being recognized correctly. Sign-in is required for authenticated shopping actions.
+
+### 4. 🛍️ Complete Shopping Workflows
+
+Beyond AI, the application brings together the main parts of a fashion shopping experience:
+
+- Product catalogue and product detail pages
+- Product search and category browsing
+- Email/password authentication
+- Cart and quantity management
+- Wishlist management
+- Saved delivery addresses
+- Checkout and order history
+- Toast notifications for shopping actions
+
+---
+
+## 📸 Screenshots & Product Walkthrough
+
+Real application screenshots are one of the best ways to demonstrate a project to recruiters and developers.
+
+The repository currently contains fashion artwork, but the full application screenshot gallery still needs to be captured from the running website. The following gallery is ready for your screenshots.
+
+**Create a folder named `docs/screenshots/` and save your screenshots using these filenames.**
+
+<details>
+  <summary><strong>📷 Screenshot checklist — click to expand</strong></summary>
+
+  | Screenshot | Suggested filename | What to capture |
+  |---|---|---|
+  | 🏠 Homepage | `home.png` | Hero, navbar, category sections, featured products |
+  | 🛍️ Product listing | `products.png` | Product cards, pricing, product browsing |
+  | 🖼️ Visual search | `visual-search.png` | Uploaded image and the returned matches |
+  | 🎙️ Voice assistant | `voice-shopping.png` | Microphone control and voice shopping interface |
+  | 🛒 Voice cart confirmation | `voice-cart-toast.png` | Product added to the bag and top-right success toast |
+  | 💗 Wishlist confirmation | `voice-wishlist-toast.png` | Product saved to the wishlist and confirmation toast |
+  | 🔐 Authentication | `login.png` | Sign-in interface |
+  | 🧾 Cart and checkout | `checkout.png` | Cart summary and checkout interface |
+
+  To capture your actual screens on Windows, open the page in Chrome and press **Win + Shift + S**. Save the captured images in `docs/screenshots/`.
+
+</details>
+
+### Add the screenshots to the gallery
+
+Once the screenshot files exist, uncomment the HTML below. The gallery will render the genuine screenshots directly in the README.
+
+<!--
+<table>
+  <tr>
+    <td width="50%">
+      <img src="docs/screenshots/home.png" alt="VastraAI homepage" width="100%" />
+      <p align="center"><strong>🏠 Fashion Storefront</strong></p>
+    </td>
+    <td width="50%">
+      <img src="docs/screenshots/products.png" alt="VastraAI product listing" width="100%" />
+      <p align="center"><strong>🛍️ Product Discovery</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="docs/screenshots/visual-search.png" alt="VastraAI visual search" width="100%" />
+      <p align="center"><strong>🖼️ AI Visual Search</strong></p>
+    </td>
+    <td width="50%">
+      <img src="docs/screenshots/voice-shopping.png" alt="VastraAI voice assistant" width="100%" />
+      <p align="center"><strong>🎙️ Voice Shopping</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="docs/screenshots/voice-cart-toast.png" alt="VastraAI voice Add to Bag confirmation" width="100%" />
+      <p align="center"><strong>🛒 Voice Cart Confirmation</strong></p>
+    </td>
+    <td width="50%">
+      <img src="docs/screenshots/voice-wishlist-toast.png" alt="VastraAI voice Wishlist confirmation" width="100%" />
+      <p align="center"><strong>💗 Wishlist Confirmation</strong></p>
+    </td>
+  </tr>
+</table>
+-->
+
+---
+
+## 🧰 Tech Stack
+
+<table>
+  <tr>
+    <th>Layer</th>
+    <th>Technology</th>
+    <th>Purpose</th>
+  </tr>
+  <tr>
+    <td>Frontend</td>
+    <td>Next.js 16, React 19, TypeScript</td>
+    <td>Application UI, App Router, client interactions</td>
+  </tr>
+  <tr>
+    <td>Styling</td>
+    <td>CSS Modules, global CSS</td>
+    <td>Component styling and responsive layouts</td>
+  </tr>
+  <tr>
+    <td>Client state</td>
+    <td>Zustand</td>
+    <td>Cart, wishlist, and toast state</td>
+  </tr>
+  <tr>
+    <td>Authentication</td>
+    <td>Better Auth</td>
+    <td>Email/password authentication and sessions</td>
+  </tr>
+  <tr>
+    <td>Database</td>
+    <td>PostgreSQL</td>
+    <td>Products, users, carts, wishlists, addresses, and orders</td>
+  </tr>
+  <tr>
+    <td>ORM</td>
+    <td>Prisma</td>
+    <td>Database models, migrations, and typed access</td>
+  </tr>
+  <tr>
+    <td>Generative AI</td>
+    <td>Google Gemini API</td>
+    <td>Natural-language search and voice-command interpretation</td>
+  </tr>
+  <tr>
+    <td>Computer vision</td>
+    <td>CLIP, Transformers.js</td>
+    <td>Image-feature extraction and embeddings</td>
+  </tr>
+  <tr>
+    <td>Vector retrieval</td>
+    <td>pgvector</td>
+    <td>Ranking products by image-embedding distance</td>
+  </tr>
+  <tr>
+    <td>Speech</td>
+    <td>Web Speech API</td>
+    <td>Browser-based speech recognition</td>
+  </tr>
+  <tr>
+    <td>Deployment</td>
+    <td>Vercel</td>
+    <td>Production hosting and deployment</td>
+  </tr>
+</table>
+
+---
+
+## 🧠 System Architecture
+
+The application follows a full-stack architecture in which the browser communicates with Next.js API routes, which coordinate database access and AI functionality.
+
+```mermaid
+flowchart TD
+    U["Shopper"] --> UI["Next.js + React UI"]
+
+    UI --> AUTH["Better Auth"]
+    UI --> API["Next.js API Routes"]
+
+    API --> DB[("PostgreSQL")]
+    API --> PS["Product & Shopping APIs"]
+
+    PS --> DB
+
+    UI --> NAT["Natural-Language Search"]
+    NAT --> GEM["Gemini API"]
+    GEM --> FILTERS["Structured Search Filters"]
+    FILTERS --> DB
+
+    UI --> MIC["Browser Speech Recognition"]
+    MIC --> VOICE["Voice Command API"]
+    VOICE --> GEM
+
+    UI --> IMG["Image Upload"]
+    IMG --> CLIP["CLIP Feature Extraction"]
+    CLIP --> EMB["512-D Image Embedding"]
+    EMB --> VECTOR["pgvector Similarity Search"]
+    VECTOR --> DB
 ```
 
-## Technology stack
+### 🔬 Visual-search pipeline
 
-| Layer | Technology | Role |
-| --- | --- | --- |
-| Web application | Next.js 16, React 19, TypeScript | App Router pages, UI, and server routes |
-| Styling | CSS Modules and global CSS | Component styling and responsive layouts |
-| Client state | Zustand | Cart, wishlist, and toast state |
-| Authentication | Better Auth | Email/password sign-in and sessions |
-| Database | PostgreSQL | Products, users, carts, wishlists, addresses, and orders |
-| ORM | Prisma | Typed database access and migrations |
-| Vector search | pgvector | Similarity ranking over image embeddings |
-| AI text understanding | Google Gemini API (`gemini-3.1-flash-lite`) | Natural-language product search and voice-command parsing |
-| Image features | Hugging Face Transformers.js + CLIP | 512-dimensional image embeddings |
-| Speech input | Browser Web Speech API | Microphone input and speech transcription |
-| Deployment | Vercel | Production hosting |
+```mermaid
+flowchart LR
+    A["Reference Image"] --> B["Image Preprocessing"]
+    B --> C["CLIP Model"]
+    C --> D["512-D Embedding"]
+    D --> E["pgvector Distance Query"]
+    E --> F["Ranked Product Matches"]
+    F --> G["Product Cards"]
+```
 
+---
+
+## 📁 Project Structure
+
+```text
+VastraAI/
+│
+├── data/
+│   └── vastra_products_ready.csv
+│
+├── prisma/
+│   ├── migrations/
+│   ├── schema.prisma
+│   └── seed.ts
+│
+├── scripts/
+│   ├── import-products.ts
+│   ├── generate_visual_embeddings.ts
+│   ├── test_visual_embedding.ts
+│   └── test_visual_embedding.py
+│
+├── public/
+│   ├── Categories/
+│   └── hero-fashion.png
+│
+├── src/
+│   ├── app/
+│   │   ├── api/
+│   │   │   ├── ai/
+│   │   │   │   ├── search/
+│   │   │   │   ├── voice/
+│   │   │   │   └── visual-search/
+│   │   │   ├── auth/
+│   │   │   ├── cart/
+│   │   │   ├── products/
+│   │   │   └── wishlist/
+│   │   │
+│   │   ├── products/
+│   │   ├── search/
+│   │   ├── visual-search/
+│   │   ├── cart/
+│   │   ├── wishlist/
+│   │   ├── checkout/
+│   │   └── orders/
+│   │
+│   ├── components/
+│   │   ├── Navbar/
+│   │   ├── ProductCard/
+│   │   ├── ProductActions/
+│   │   ├── Toast/
+│   │   └── VoiceShopping.tsx
+│   │
+│   ├── lib/
+│   │   ├── auth.ts
+│   │   ├── prisma.ts
+│   │   ├── clip.ts
+│   │   └── productSearch.ts
+│   │
+│   └── store/
+│       ├── authStore.ts
+│       ├── cartStore.ts
+│       ├── wishlistStore.ts
+│       ├── orderStore.ts
+│       └── toastStore.ts
+│
+├── next.config.ts
+├── prisma.config.ts
+├── package.json
+└── README.md
+```
 ## Architecture
 
 ```mermaid
@@ -134,160 +448,253 @@ flowchart TD
     VectorSearch --> DB
 ```
 
-At a high level, the browser handles the interactive shopping experience. Next.js API routes validate requests and coordinate with authentication, Gemini, CLIP inference, and PostgreSQL. Visual search compares the query image embedding against the product embeddings already stored in the database.
+---
 
-## Repository structure
+## ⚙️ Getting Started
 
-```text
-VastraAI/
-├── data/
-│   └── vastra_products_ready.csv   # Product catalogue source data
-├── prisma/
-│   ├── migrations/                 # Database migration history
-│   └── schema.prisma               # PostgreSQL data model
-├── scripts/
-│   ├── import-products.ts          # Import product rows from CSV
-│   └── generate_visual_embeddings.ts
-├── src/
-│   ├── app/                        # Pages and API routes
-│   │   └── api/ai/                  # Gemini and visual-search handlers
-│   ├── components/                 # Product UI, voice assistant, toast, navbar
-│   ├── lib/                        # Auth, Prisma, CLIP, product search helpers
-│   └── store/                      # Zustand cart, wishlist, and toast stores
-├── next.config.ts
-├── prisma.config.ts
-└── package.json
-```
+Want to run VastraAI locally? Follow these steps.
 
-## Getting started
+### ✅ Prerequisites
 
-### Prerequisites
+Before getting started, install or configure:
 
-- Node.js compatible with the project's Next.js version
+- Node.js compatible with Next.js 16
 - npm
-- A PostgreSQL database
-- A Google Gemini API key for AI text and voice features
-- A PostgreSQL instance with the **pgvector** extension enabled for visual search
+- PostgreSQL
+- A PostgreSQL database with the pgvector extension enabled
+- A Google Gemini API key for AI search and voice interpretation
 
-### 1. Clone and install
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/Sujaltonge384/VastraAI.git
+
 cd VastraAI
+```
+
+### 2. Install dependencies
+
+```bash
 npm install
 ```
 
-### 2. Configure environment variables
+### 3. Configure environment variables
 
-Create a local `.env` file in the project root. Start from the variable names in [`.env.example`](.env.example) and provide your own credentials.
+Copy the example environment file.
 
-Required variables:
+**Windows PowerShell:**
 
-| Variable | Purpose |
-| --- | --- |
+```powershell
+Copy-Item .env.example .env
+```
+
+**macOS / Linux:**
+
+```bash
+cp .env.example .env
+```
+
+Open `.env` and replace the placeholder values with your own credentials.
+
+| Variable | Description |
+|---|---|
 | `DATABASE_URL` | PostgreSQL connection string |
-| `BETTER_AUTH_URL` | Base URL of the application, such as `http://localhost:3000` locally |
-| `BETTER_AUTH_SECRET` | Long, random secret used by Better Auth |
-| `GEMINI_API_KEY` | API key for Gemini-powered search and voice parsing |
+| `BETTER_AUTH_URL` | Application base URL, such as `http://localhost:3000` |
+| `BETTER_AUTH_SECRET` | Long, randomly generated authentication secret |
+| `GEMINI_API_KEY` | Google Gemini API key |
 
-Never commit your real `.env` file or publish API keys.
+Never commit your real `.env` file or expose production secrets.
 
-### 3. Prepare the database
+### 4. Prepare PostgreSQL and pgvector
 
-Ensure pgvector is enabled on the target PostgreSQL database. Run the following in your database console if your provider supports it and the extension is not already enabled:
+Ensure the pgvector extension is installed and enabled for your database.
+
+If your PostgreSQL provider supports it and it has not already been enabled, execute:
 
 ```sql
 CREATE EXTENSION IF NOT EXISTS vector;
 ```
 
-Then generate Prisma Client and apply the migrations:
+Generate Prisma Client and apply the database migrations:
 
 ```bash
 npx prisma generate
+
 npx prisma migrate dev
 ```
 
-Use a separate database for local development. Do not run development migrations against production without reviewing the migration plan.
+Use a separate development database when running development migrations.
 
-### 4. Import products (optional)
+### 5. Import the product catalogue (optional)
 
-The repository includes `data/vastra_products_ready.csv`. If your database does not already contain products, import the catalogue:
+The repository contains a product dataset at:
+
+`data/vastra_products_ready.csv`
+
+If your database is empty and you want to import the catalogue, run:
 
 ```bash
 npx tsx scripts/import-products.ts
 ```
 
-Do not rerun the import unnecessarily against a populated database.
+Skip this step if the database already contains the product catalogue.
 
-### 5. Generate visual embeddings (optional, required for a populated visual-search catalogue)
+### 6. Generate visual embeddings (optional)
 
-Visual search needs embeddings saved for products. After importing products and enabling pgvector, run:
+Visual search requires embeddings to be stored for products in the database.
+
+After the product data is available and pgvector has been configured, run:
 
 ```bash
 npx tsx scripts/generate_visual_embeddings.ts
 ```
 
-This process downloads/loads the CLIP model and processes product images. It can take time and resources for a large catalogue, so run it as a one-time data preparation task rather than at every app startup.
+This process loads the CLIP model, processes product images, and stores their embeddings. It may take time and computing resources for a large catalogue.
 
-### 6. Start the development server
+You do not need to regenerate embeddings every time you start the application.
+
+### 7. Start the development server
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open:
 
-### Useful development commands
-
-```bash
-npm run lint
-npm run build
-npx prisma generate
-npx prisma migrate dev
-```
-
-## Key API routes
-
-| Endpoint | Method | Purpose |
-| --- | --- | --- |
-| `/api/ai/search` | `POST` | Convert natural-language shopping requests into database filters and return products |
-| `/api/ai/voice` | `POST` | Convert a recognized voice command into a structured intent |
-| `/api/ai/visual-search` | `POST` | Accept an image upload, generate its embedding, and return similar products |
-| `/api/auth/[...all]` | `GET/POST` | Better Auth handler |
-| `/api/cart` | `GET/POST` | Read or add cart items |
-| `/api/wishlist` | `GET/POST/DELETE` | Read or update wishlist items |
-| `/api/products` | `GET` | Query the product catalogue |
-
-The route behavior is implemented in `src/app/api/`.
-
-## Deployment
-
-The application is configured for Vercel deployment. Configure the same required environment variables in the Vercel project before deploying:
-
-- `DATABASE_URL`
-- `BETTER_AUTH_URL` set to the production site URL
-- `BETTER_AUTH_SECRET`
-- `GEMINI_API_KEY`
-
-The visual-search route also explicitly traces the ONNX Runtime packages through `next.config.ts`. Test the production build and all authenticated shopping flows after a deployment.
-
-## Current verification
-
-- **Visual-search API:** Manually tested against the deployed endpoint with a sample image; the endpoint returned `HTTP 200` and 20 product results.
-- **Voice-triggered toast notifications:** The shared toast store is wired into the supported voice cart/wishlist action handlers. Test both flows in the browser before relying on them in a demo.
-- **Full UI screenshot gallery:** Not yet committed; see [Screenshots](#screenshots) for the recommended captures.
-
-## Contributing
-
-For a change:
-
-1. Create a feature branch.
-2. Keep credentials in local environment files, never in source control.
-3. Run `npm run lint` and `npm run build`.
-4. Open a pull request with a clear summary and screenshots for UI changes.
+**http://localhost:3000**
 
 ---
 
+## 🔌 Key API Routes
+
+| Route | Method | Purpose |
+|---|---|---|
+| `/api/ai/search` | POST | Parse a natural-language product query and return matching products |
+| `/api/ai/voice` | POST | Interpret a recognized voice command |
+| `/api/ai/visual-search` | POST | Generate an image embedding and return similar products |
+| `/api/auth/[...all]` | GET / POST | Better Auth handler |
+| `/api/products` | GET | Retrieve and search the product catalogue |
+| `/api/cart` | GET / POST | Read the cart or add items |
+| `/api/wishlist` | GET / POST / DELETE | Read or modify wishlist items |
+
+The route implementations live under `src/app/api/`.
+
+---
+
+## 🌐 Live Demo
+
 <p align="center">
-  Built as a full-stack AI fashion e-commerce project.
+  <a href="https://vastra-ai-beta.vercel.app">
+    <img src="https://img.shields.io/badge/Explore_VastraAI-Visit_the_Live_Application-e84e68?style=for-the-badge&logo=vercel&logoColor=white" alt="Explore VastraAI" />
+  </a>
+</p>
+
+Explore the application:
+
+- **Storefront:** https://vastra-ai-beta.vercel.app/
+- **Products:** https://vastra-ai-beta.vercel.app/products
+- **Search:** https://vastra-ai-beta.vercel.app/search
+- **Visual search:** https://vastra-ai-beta.vercel.app/visual-search
+- **Cart:** https://vastra-ai-beta.vercel.app/cart
+- **Wishlist:** https://vastra-ai-beta.vercel.app/wishlist
+
+Some routes and shopping actions require you to sign in.
+
+---
+
+## 🚀 Deployment
+
+VastraAI is configured for deployment on Vercel.
+
+Before deploying:
+
+1. Configure the production environment variables.
+2. Ensure the production PostgreSQL database is reachable.
+3. Confirm that pgvector is enabled and product embeddings are populated.
+4. Verify the Better Auth base URL.
+5. Deploy and inspect the build and runtime logs.
+6. Test authentication, product browsing, cart, wishlist, and AI endpoints.
+
+The visual-search route explicitly traces the ONNX Runtime packages in `next.config.ts` so that the required server-side runtime files are included in the deployment.
+
+---
+
+## 🧪 Verification & Project Status
+
+| Area | Status |
+|---|---|
+| Production deployment | Live |
+| Product catalogue API | Implemented |
+| Natural-language search API | Implemented |
+| Visual-search API | Manually tested; returned HTTP 200 with 20 results |
+| Authentication | Integrated with Better Auth |
+| Cart and wishlist | Integrated with API routes and client state stores |
+| Voice shopping | Implemented for supported commands; browser testing recommended |
+| Voice cart/wishlist toast feedback | Integrated; verify both flows in the live browser |
+| Full UI screenshot gallery | Screenshots still need to be captured and added |
+
+Feature status may evolve as the application continues to be tested and improved.
+
+---
+
+## 🛠️ Useful Development Commands
+
+```bash
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
+
+# Run ESLint
+npm run lint
+
+# Generate Prisma Client
+npx prisma generate
+
+# Apply development migrations
+npx prisma migrate dev
+
+# Build the production application
+npm run build
+
+# Start the production build locally
+npm run start
+```
+
+---
+
+## 🔮 Future Improvements
+
+Potential directions for further development include:
+
+- 👗 Personalized outfit and style recommendations
+- 🧥 AI-generated outfit combinations
+- 🎯 Improved relevance evaluation for visual search
+- 🧠 More context-aware voice shopping
+- 📱 Further mobile UX improvements
+- 📊 Product discovery analytics
+- 🧪 Automated tests for cart, wishlist, voice, and search flows
+
+These are potential improvements, not claims that every item is already implemented.
+
+---
+
+## 👨‍💻 About the Project
+
+VastraAI was built to explore how full-stack engineering, generative AI, computer vision, and vector search can work together in a practical consumer application.
+
+The project involves designing user-facing shopping flows, implementing API routes, modelling relational data, integrating AI services, and solving real production deployment issues.
+
+**The goal is simple: make fashion discovery feel more natural, visual, and interactive.**
+
+<p align="center">
+  <strong>VastraAI</strong><br />
+  <em>Fashion meets intelligence.</em>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Sujaltonge384/VastraAI">GitHub Repository</a>
+  &nbsp; · &nbsp;
+  <a href="https://vastra-ai-beta.vercel.app">Live Demo</a>
 </p>
