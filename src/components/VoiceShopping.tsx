@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { Mic, MicOff } from "lucide-react";
 import { useCartStore } from "../store/cartStore";
+import { useToastStore } from "../store/toastStore";
+import { useWishlistStore } from "../store/wishlistStore";
 
 type VoiceCommand = {
   intent: string;
@@ -55,6 +57,10 @@ export default function VoiceShopping() {
   const pathname = usePathname();
 
   const setItems = useCartStore((state) => state.setItems);
+  const showToast = useToastStore((state) => state.showToast);
+  const addWishlistItemToStore = useWishlistStore((state) => state.addToWishlist);
+  const removeWishlistItemFromStore = useWishlistStore((state) => state.removeFromWishlist);
+  const clearWishlistStore = useWishlistStore((state) => state.clearWishlist);
 
   const [listening, setListening] = useState(false);
 
@@ -687,6 +693,18 @@ export default function VoiceShopping() {
     }
 
     await loadWishlist();
+
+    // Keep the same shared wishlist state used by product cards and buttons.
+    addWishlistItemToStore({
+      id: product.id,
+      name: product.name,
+      brand: product.brand ?? "",
+      price: product.price,
+      image: product.image ?? "",
+    });
+
+    // Reuse the global top-right toast shown by regular wishlist buttons.
+    showToast(`${product.name} added to wishlist`);
     console.log("✅ ADDED TO WISHLIST:", product.name);
   };
 
@@ -731,6 +749,8 @@ export default function VoiceShopping() {
     }
 
     await loadWishlist();
+    removeWishlistItemFromStore(item.id);
+    showToast(`${item.name} removed from wishlist`);
     console.log("✅ REMOVED FROM WISHLIST:", item.name);
   };
 
@@ -767,6 +787,8 @@ export default function VoiceShopping() {
     }
 
     setWishlistItems([]);
+    clearWishlistStore();
+    showToast("Wishlist cleared");
     console.log("✅ WISHLIST CLEARED SUCCESSFULLY");
   };
 
@@ -1008,6 +1030,9 @@ export default function VoiceShopping() {
           result.size
         );
 
+        // Match the exact global top-right notification used by Add to Bag.
+        showToast(`${product.name} added to your bag`);
+
         return;
       }
 
@@ -1113,9 +1138,14 @@ export default function VoiceShopping() {
           }
         }
 
+        if (!product && command.productName) {
+          product = await resolveProductByName(command.productName);
+        }
+
         if (!product) {
-          console.error("❌ No product available for wishlist command.");
-          return;
+          throw new Error(
+            `I could not find ${command.productName || "that product"} to add to your wishlist.`
+          );
         }
 
         await addToWishlist(product);
@@ -1416,10 +1446,14 @@ export default function VoiceShopping() {
         error
       );
 
-      speak(
-        error?.message ||
-          "Sorry, I couldn't complete that command."
-      );
+      const errorMessage =
+        error instanceof Error
+          ? error.message
+          : "Sorry, I couldn't complete that command.";
+
+      // Voice actions should provide visible feedback just like button actions.
+      showToast(errorMessage);
+      speak(errorMessage);
     }
   };
 
