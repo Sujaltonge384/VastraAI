@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1860" height="768" viewBox="0 0 1860 768" role="img" aria-labelledby="title desc">
+  <title id="title">VastraAI — Discover Fashion. Search Smarter. Shop with AI.</title>
+  <desc id="desc">Fashion campaign image with elegant dark-brown editorial typography over the open cream space on the left.</desc>
+  <image href="https://raw.githubusercontent.com/Sujaltonge384/VastraAI/main/public/hero-fashion.png" width="1860" height="768" preserveAspectRatio="xMidYMid slice"/>
+  <g fill="#4b2b1d" text-anchor="middle">
+    <path d="M462 253 H550" stroke="#6b4936" stroke-width="1.5" fill="none"/>
+    <text x="500" y="420" font-family="Georgia, 'Times New Roman', serif" font-size="160" font-weight="400" letter-spacing="-7">VastraAI</text>
+    <text x="508" y="477" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="400" letter-spacing="0.1">Discover Fashion. Search Smarter. Shop with AI.</text>
+    <path d="M462 532 H550" stroke="#6b4936" stroke-width="1.5" fill="none"/>
+  </g>
+</svg>
