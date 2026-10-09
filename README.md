@@ -186,14 +186,18 @@ The repository currently contains fashion artwork, but the full application scre
 
   | Screenshot | Suggested filename | What to capture |
   |---|---|---|
-  | 🏠 Homepage | `home.png` | Hero, navbar, category sections, featured products |
-  | 🛍️ Product listing | `products.png` | Product cards, pricing, product browsing |
-  | 🖼️ Visual search | `visual-search.png` | Uploaded image and the returned matches |
-  | 🎙️ Voice assistant | `voice-shopping.png` | Microphone control and voice shopping interface |
-  | 🛒 Voice cart confirmation | `voice-cart-toast.png` | Product added to the bag and top-right success toast |
-  | 💗 Wishlist confirmation | `voice-wishlist-toast.png` | Product saved to the wishlist and confirmation toast |
-  | 🔐 Authentication | `login.png` | Sign-in interface |
-  | 🧾 Cart and checkout | `checkout.png` | Cart summary and checkout interface |
+  | 🏠 Homepage | `home.png` | Hero, navbar, category sections, and featured products |
+  | 🛍️ Product listing | `products.png` | Product cards, pricing, filters, and product browsing |
+  | 🖼️ Visual search | `visual-search.png` | Uploaded reference image and returned product matches |
+  | 🎙️ Voice assistant | `voice-shopping.png` | Microphone control and voice-shopping interface |
+  | 🛒 Voice cart confirmation | `voice-cart-toast.png` | Product added by voice and top-right success toast |
+  | 💗 Voice wishlist confirmation | `voice-wishlist-toast.png` | Product saved by voice and confirmation toast |
+  | 🔐 Login | `login.png` | Sign-in interface |
+  | 📝 Register | `register.png` | Create-account form and registration interface |
+  | 👤 User profile | `profile.png` | Profile details and account options |
+  | 🛍️ Shopping bag | `shopping-bag.png` | Selected products and quantity controls in the shopping bag |
+  | 🧺 Cart | `cart.png` | Cart items, price summary, quantity controls, and remove options |
+  | 💳 Checkout | `checkout.png` | Checkout form, order summary, and order placement |
 
   To capture your actual screens on Windows, open the page in Chrome and press **Win + Shift + S**. Save the captured images in `docs/screenshots/`.
 
@@ -201,38 +205,76 @@ The repository currently contains fashion artwork, but the full application scre
 
 ### Add the screenshots to the gallery
 
-Once the screenshot files exist, uncomment the HTML below. The gallery will render the genuine screenshots directly in the README.
+After you add the real image files to `docs/screenshots/`, remove the opening `<!--` and closing `-->` markers around the gallery below. GitHub will then display the screenshots directly in this README.
+
+**Commit the screenshot images from your local project folder:**
+
+```bash
+git add docs/screenshots/
+git commit -m "docs: add VastraAI screenshots"
+git push origin main
+```
 
 <!--
 <table>
   <tr>
-    <td width="50%">
+    <td width="50%" valign="top">
       <img src="docs/screenshots/home.png" alt="VastraAI homepage" width="100%" />
-      <p align="center"><strong>🏠 Fashion Storefront</strong></p>
+      <p align="center"><strong>🏠 Homepage</strong></p>
     </td>
-    <td width="50%">
+    <td width="50%" valign="top">
       <img src="docs/screenshots/products.png" alt="VastraAI product listing" width="100%" />
-      <p align="center"><strong>🛍️ Product Discovery</strong></p>
+      <p align="center"><strong>🛍️ Product Listing</strong></p>
     </td>
   </tr>
   <tr>
-    <td width="50%">
+    <td width="50%" valign="top">
       <img src="docs/screenshots/visual-search.png" alt="VastraAI visual search" width="100%" />
       <p align="center"><strong>🖼️ AI Visual Search</strong></p>
     </td>
-    <td width="50%">
-      <img src="docs/screenshots/voice-shopping.png" alt="VastraAI voice assistant" width="100%" />
+    <td width="50%" valign="top">
+      <img src="docs/screenshots/voice-shopping.png" alt="VastraAI voice shopping assistant" width="100%" />
       <p align="center"><strong>🎙️ Voice Shopping</strong></p>
     </td>
   </tr>
   <tr>
-    <td width="50%">
+    <td width="50%" valign="top">
       <img src="docs/screenshots/voice-cart-toast.png" alt="VastraAI voice Add to Bag confirmation" width="100%" />
       <p align="center"><strong>🛒 Voice Cart Confirmation</strong></p>
     </td>
-    <td width="50%">
-      <img src="docs/screenshots/voice-wishlist-toast.png" alt="VastraAI voice Wishlist confirmation" width="100%" />
+    <td width="50%" valign="top">
+      <img src="docs/screenshots/voice-wishlist-toast.png" alt="VastraAI voice wishlist confirmation" width="100%" />
       <p align="center"><strong>💗 Wishlist Confirmation</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="docs/screenshots/login.png" alt="VastraAI login page" width="100%" />
+      <p align="center"><strong>🔐 Login</strong></p>
+    </td>
+    <td width="50%" valign="top">
+      <img src="docs/screenshots/register.png" alt="VastraAI registration page" width="100%" />
+      <p align="center"><strong>📝 Register</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="docs/screenshots/profile.png" alt="VastraAI user profile" width="100%" />
+      <p align="center"><strong>👤 User Profile</strong></p>
+    </td>
+    <td width="50%" valign="top">
+      <img src="docs/screenshots/shopping-bag.png" alt="VastraAI shopping bag" width="100%" />
+      <p align="center"><strong>🛍️ Shopping Bag</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="docs/screenshots/cart.png" alt="VastraAI cart page" width="100%" />
+      <p align="center"><strong>🧺 Cart</strong></p>
+    </td>
+    <td width="50%" valign="top">
+      <img src="docs/screenshots/checkout.png" alt="VastraAI checkout page" width="100%" />
+      <p align="center"><strong>💳 Checkout</strong></p>
     </td>
   </tr>
 </table>
